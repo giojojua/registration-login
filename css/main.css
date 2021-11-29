@@ -1,0 +1,54 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login_register {
+    padding: 50px;
+    background-color: #2b2b30;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.login_register h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.login_register input {
+    display: block;
+    width: 350px;
+    margin: 10px 0;
+    font-size: 16px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+.login_register .checkbox input {
+    display: inline;
+    width: auto;
+}
+
+.login_register button {
+    display: block;
+    margin: 15px auto 0 auto;
+    padding: 15px 35px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #000;
+    outline: none;
+    cursor: pointer;
+}
+
