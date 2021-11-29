@@ -1,23 +1,27 @@
+const loginSubmit = document.getElementById('login_submit')
 const registerSumbit = document.getElementById('register_submit')
 
 if (registerSumbit != null) {
 
     registerSumbit.addEventListener('click', function e() {
 
+        //Field Values Start
         const userName = document.getElementById('user_name').value
         const email = document.getElementById('email').value
         const age = document.getElementById('age').value
         const password = document.getElementById('password').value
         const passwordConfirm = document.getElementById('password_confirm').value
         const registerAgreement = document.getElementById('register_agreement')
+        //Field Values End
 
-        //error divs
+        // Errors Variable Start
         const userNameError = document.getElementById("error_username")
         const emailError = document.getElementById("error_email")
         const ageError = document.getElementById("error_age")
         const passwordError = document.getElementById("error_password")
         const passwordConfirmError = document.getElementById("error_password2")
         const registerAgreementError = document.getElementById("error_agree")
+        // Errors Variable End
 
         let errors = {}
 
@@ -60,7 +64,7 @@ if (registerSumbit != null) {
             errors.passwordConfirm = 'Passwords doesn\'t match'
             passwordConfirmError.innerHTML = errors.passwordConfirm
             passwordConfirmError.style.color = 'red'
-        } else if (password === passwordConfirm && password.length > 7){
+        } else if (password === passwordConfirm && password.length > 7) {
             passwordConfirmError.innerHTML = ''
             localStorage.setItem('password', password)
         }
@@ -73,6 +77,13 @@ if (registerSumbit != null) {
             registerAgreementError.innerHTML = ''
         }
 
-        console.log(errors)
+        return JSON.stringify(errors)
+    })
+}
+
+if (loginSubmit != null) {
+    loginSubmit.addEventListener('click', function e() {
+        const loginUsername = document.getElementById('login_user').value
+        const loginPassword = document.getElementById('login_password').value
     })
 }
